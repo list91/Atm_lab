@@ -23,6 +23,9 @@ public class Main {
         startMenu();
     }
 
+    // Метод `startMenu()` вызывает меню для работы с экземплярами класса `SecondPart`.
+    // Он запрашивает идентификатор экземпляра, затем выводит меню,
+    // дает возможность получить баланс, снять деньги со счета, положить деньги на счет и выйти из меню.
     public static void startMenu(){
         boolean flag;
         Scanner scanner = new Scanner(System.in);

@@ -2,6 +2,8 @@ package org.example;
 
 public class SecondPart {
     static Account[] accounts = new Account[10];
+
+    // создаем массив из 10 экземпляров
     public static void createArray() {
 
         for (int i = 0; i < accounts.length; i++) {

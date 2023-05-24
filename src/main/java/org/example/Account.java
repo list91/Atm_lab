@@ -14,6 +14,10 @@ public class Account {
     // дата создания счета
     private Date dateCreated;
 
+    // Конструктор "Account()" создает новый экземпляр
+    // класса "Account" с нулевыми значениями для полей
+    // id и balance, а также датой создания, которая
+    // устанавливается текущей датой.
     public Account() {
         id = 0;
         balance = 0;
@@ -55,10 +59,15 @@ public class Account {
         return dateCreated;
     }
 
+    // возвращает десятичную дробь, соответствующую месячной процентной ставке
     public double getMonthlyInterest(){
         return (balance * (annualInterestRate / 12)) / 100;
     }
 
+    // Методы "withDraw()" и "deposit()" используются для снятия и пополнения счета соответственно.
+    // Если операция проводится успешно, то выводится сообщение "[Операция выполнена]".
+    // Если операция не может быть выполнена, то выводится сообщение "Недостаточно средств" или "Недопустимое значение" соответственно.
+    // Флаг "isSecond" используется для вывода сообщения только для второй части задания.
     public void withDraw(double sumToBeWithDrawn, boolean isSecond){
         if (sumToBeWithDrawn <= getBalance()){
             balance -=sumToBeWithDrawn;
