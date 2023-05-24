@@ -2,7 +2,7 @@ package org.example;
 
 public class SecondPart {
     static Account[] accounts = new Account[10];
-    public static void createArray(int len) {
+    public static void createArray() {
 
         for (int i = 0; i < accounts.length; i++) {
             accounts[i] = new Account();
