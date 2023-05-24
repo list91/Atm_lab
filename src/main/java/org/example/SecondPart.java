@@ -37,4 +37,14 @@ public class SecondPart {
         }
     }
 
+    // вернуть баланс заданного ID
+    public static double getBalanceThisAcc(int id){
+        for (Account account : accounts){
+            if (account.getId() == id){
+                return account.getBalance();
+            }
+        }
+        return -999.9;
+    }
+
 }
