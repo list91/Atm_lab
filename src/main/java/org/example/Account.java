@@ -59,10 +59,24 @@ public class Account {
         return (balance * (annualInterestRate / 12)) / 100;
     }
 
-    public void withDraw(double sumToBeWithDrawn){
-        balance -=sumToBeWithDrawn;
+    public void withDraw(double sumToBeWithDrawn, boolean isSecond){
+        if (sumToBeWithDrawn <= getBalance()){
+            balance -=sumToBeWithDrawn;
+            if (isSecond){
+                System.out.println("[Операция выполнена]");
+            }
+        } else {
+            System.out.println("Недостаточно средств");
+        }
     }
-    public void deposit(double sumToBeDeposit){
-        balance +=sumToBeDeposit;
+    public void deposit(double sumToBeDeposit, boolean isSecond){
+        if (sumToBeDeposit > 0){
+            balance +=sumToBeDeposit;
+            if (isSecond){
+                System.out.println("[Операция выполнена]");
+            }
+        } else {
+            System.out.println("Недопустимое значение");
+        }
     }
 }

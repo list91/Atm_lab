@@ -21,18 +21,18 @@ public class SecondPart {
     }
 
     // снимаем деньги у заданного ID заданную сумму
-    public static void withDrawThisAcc(int id, double sum){
+    public static void withDrawThisAcc(int id, double sum, boolean isSecond){
         for (Account account : accounts) {
             if (account.getId() == id) {
-                account.withDraw(sum);
+                account.withDraw(sum, isSecond);
             }
         }
     }
     // закидываем деньги заданному ID заданную сумму
-    public static void depositThisAcc(int id, double sum){
+    public static void depositThisAcc(int id, double sum, boolean isSecond){
         for (Account account : accounts) {
             if (account.getId() == id) {
-                account.deposit(sum);
+                account.deposit(sum, isSecond);
             }
         }
     }
