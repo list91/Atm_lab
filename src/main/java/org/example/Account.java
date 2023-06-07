@@ -30,8 +30,8 @@ public class Account {
     }
 
     public Account(int id, double balance) {
-        this.id = 0;
-        this.balance = 0;
+        this.id = id;
+        this.balance = balance;
         dateCreated = new Date();
     }
 
